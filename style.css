@@ -1,0 +1,170 @@
+/* Global rules */
+:root {
+  --primary-red: hsl(0, 78%, 62%);
+  --primary-cyan: hsl(180, 62%, 55%);
+  --primary-orange: hsl(34, 97%, 64%);
+  --primary-blue: hsl(212, 86%, 64%);
+  --neutral-dablue: hsl(234, 12%, 34%);
+  --neutral-grblue: hsl(229, 6%, 66%);
+  --neutral-liblue: hsl(0, 0%, 98%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  min-height: 100vh;
+  min-height: 100svh;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  color: var(--neutral-dablue);
+}
+/* End of Global rules */
+
+/* styling header */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 50px auto;
+  padding: 0 25px;
+  width: 80%;
+  max-width: 600px;
+}
+.header h4 {
+  font-weight: 200;
+  font-size: 2em;
+}
+.header h1 {
+  margin: 6px 0 12px 0;
+  font-size: 2em;
+  font-weight: 600;
+}
+.header p {
+  font-weight: 200;
+}
+/* end of styling header */
+
+/* start styling section */
+.section {
+  margin: auto;
+  padding: 0 20px;
+  max-width: 80%;
+}
+.cards-container {
+  display: flex;
+  padding: 25px;
+  align-items: center;
+  justify-content: space-between;
+}
+.cards-container-left {
+  width: 33%;
+}
+.cards-container-center {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 34%;
+}
+.cards-container-right {
+  width: 33%;
+}
+.cards-container .card {
+  overflow: hidden;
+  width: 90%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-radius: 8px;
+  box-shadow: 0px 0px 24px 0px rgba(204, 204, 204, 0.98);
+}
+.card-text {
+  width: 100%;
+  padding: 20px 24px;
+}
+.card-text h2 {
+  font-weight: 600;
+  font-size: 18px;
+  padding-bottom: 8px;
+}
+.card-text p {
+  font-weight: 200;
+  font-size: 12px;
+  line-height: 1.6;
+}
+.card img {
+  max-width: 30%;
+  margin-bottom: 24px;
+  margin-right: 24px;
+}
+.card-1::before {
+  content: "";
+  background-color: var(--primary-cyan);
+  width: 100%;
+  height: 4px;
+}
+.card-2::before {
+  content: "";
+  background-color: var(--primary-red);
+  width: 100%;
+  height: 4px;
+}
+.card-3::before {
+  content: "";
+  background-color: var(--primary-orange);
+  width: 100%;
+  height: 4px;
+}
+.card-4::before {
+  content: "";
+  background-color: var(--primary-blue);
+  width: 100%;
+  height: 4px;
+}
+/* end of styling section */
+
+/* Apply for small screens */
+@media (max-width: 700px) {
+  .section {
+    margin: 10px auto 40px auto;
+  }
+  .header {
+    margin: 40px auto 10px auto;
+  }
+  .header h4 {
+    font-weight: 200;
+    font-size: 1.2em;
+  }
+  .header h1 {
+    margin: 6px 0 12px 0;
+    font-size: 1.2em;
+    font-weight: 600;
+  }
+  .header p {
+    font-weight: 200;
+  }
+  .cards-container {
+    flex-direction: column;
+    gap: 24px;
+    padding: 0px;
+  }
+  .cards-container .card {
+    width: 100%;
+  }
+  .cards-container-left,
+  .cards-container-right,
+  .cards-container-center {
+    width: 100%;
+  }
+}
