@@ -137,10 +137,10 @@ body {
 /* Apply for small screens */
 @media (max-width: 700px) {
   .section {
-    margin: 10px auto 40px auto;
+    margin: 40px auto 40px auto;
   }
   .header {
-    margin: 40px auto 10px auto;
+    margin: 40px auto 20px auto;
   }
   .header h4 {
     font-weight: 200;
